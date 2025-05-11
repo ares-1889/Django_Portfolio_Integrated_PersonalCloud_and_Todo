@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>Vault</h3>
+
+    <form method="post" action="/api/file_upload" enctype="multipart/form-data">
+        {% csrf_token %}
+        <input type="text" name="file_name" placeholder="Enter file name" id="file_name"  required>
+        <input type="file" name="file_file"  id="file_file" required>
+
+        <button type="submit">Upload</button>
+    </form>
+</body>
+
+<!-- <script type="text/javascript">
+    const fileInput = document.getElementById('file');
+    const form = document.querySelector('form');
+
+    form.addEventListener('submit', async function(event) {
+        event.preventDefault(); 
+        const formData = new FormData()
+        formData.append('file', fileInput.files[0])
+
+        const response = await fetch('/api/file_upload', {
+            method: 'POST',
+            body: formData,
+            headers: {
+                'X-CSRFToken': getCSRFToken()
+            }
+        })
+        const result = await response.json();
+        if (result.status === 'success') {
+            alert('File uploaded successfully');
+        } else {
+            alert('File upload failed' + result.message)
+        }
+    });
+
+    function getCSRFToken() {
+        let cookieValue = null;
+        const cookies = document.cookie.split(';');
+        for (let i = 0; i < cookies.length; i++) {
+            const cookie = cookies[i].trim()
+            if (cookie.startsWith('csrftoken='))
+                cookieValue = cookie.substring('csrftoken='.length, cookie.length);
+                break;
+        }
+       return cookieValue;} 
+    
+
+</script> -->
+</html>

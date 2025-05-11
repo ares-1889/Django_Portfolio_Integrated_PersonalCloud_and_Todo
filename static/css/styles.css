@@ -1,0 +1,60 @@
+body {
+    background: #1c1c1c;
+    /* Matte blackish background */
+    color: #ffffff;
+    /* White text color for contrast */
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    /* Apple font */
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: flex-end;
+    /* Align content to the right */
+    align-items: flex-start;
+    /* Align content to the top */
+}
+
+form#credentials-field {
+    background: rgba(255, 255, 255, 0.1);
+    /* Slightly transparent white background */
+    padding: 20px;
+    border-radius: 8px;
+    /* Smooth rounded corners */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    /* Subtle shadow for depth */
+    margin: 20px;
+    width: 300px;
+}
+
+form#credentials-field input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 4px;
+    background: rgba(255, 255, 255, 0.2);
+    /* Slightly transparent input background */
+    color: #ffffff;
+    /* White text color */
+    font-size: 16px;
+}
+
+form#credentials-field input::placeholder {
+    color: #cccccc;
+    /* Light gray placeholder text */
+}
+
+form#credentials-field input:focus {
+    outline: none;
+    background: rgba(255, 255, 255, 0.3);
+    /* Slightly brighter background on focus */
+}
+
+h1 {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    font-size: 24px;
+    color: #ffffff;
+}
